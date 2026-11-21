@@ -1,0 +1,12 @@
+node_modules
+dist
+.output
+.wxt
+.env
+*.log
+.DS_Store
+.neon
+.env.local
+
+# Real exported provider data (may be sensitive) - never commit
+samples/

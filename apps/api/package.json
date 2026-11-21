@@ -1,0 +1,36 @@
+{
+  "name": "@ai-manager/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --env-file=../../.env src/server.ts",
+    "start": "tsx --env-file=../../.env src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx --env-file=../../.env src/db/migrate.ts",
+    "db:check": "tsx --env-file=../../.env src/db/check.ts",
+    "auth:check": "tsx --env-file=../../.env src/modules/auth/check.ts",
+    "ingest:check": "tsx --env-file=../../.env src/modules/ingestion/check.ts"
+  },
+  "dependencies": {
+    "@ai-manager/provider-adapters": "workspace:*",
+    "@ai-manager/schemas": "workspace:*",
+    "@fastify/cookie": "^11.1.5",
+    "@fastify/cors": "^10.0.0",
+    "@fastify/rate-limit": "^11.2.2",
+    "arctic": "^3.7.0",
+    "drizzle-orm": "^0.38.0",
+    "fastify": "^5.2.0",
+    "pg": "^8.13.0",
+    "pino": "^9.6.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.0",
+    "drizzle-kit": "^0.30.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}
